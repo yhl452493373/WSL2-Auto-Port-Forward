@@ -7,6 +7,8 @@ WSL:Ubuntu-18.04
 
 文件位置:我放在 D:\WSL 目录下
 
+Windows计划任务配置参考目录下截图
+
 + "导出Ubuntu-18.04.cmd" 用于导出WSL到脚本所在目录,导出后文件名为Ubuntu-18.04.tar
 + "TAR恢复Ubuntu-18.04.cmd" 用于恢复 "导出Ubuntu-18.04.cmd" 脚本所导出的WSL,恢复位置为: E:\Linux\Ubuntu-18.04,可通过修改脚本修改恢复位置
 + "移除恢复的Ubuntu-18.04.cmd" 用于卸载 "TAR恢复Ubuntu-18.04.cmd" 脚本所恢复的WSL
@@ -23,6 +25,8 @@ WSL:Ubuntu-18.04
 
 ALL FILES IN: D:\WSL
 
+Windows Task Scheduler please visti two floder "关闭WSL容器计划任务配置" and "启动WSL容器计划任务配置"
+
 + "导出Ubuntu-18.04.cmd" is use to export WSL to script dir,export file name is Ubuntu-18.04.tar.
 + "TAR恢复Ubuntu-18.04.cmd" is use to restore exported WSL by "导出Ubuntu-18.04.cmd" ,restore WSL file at: E:\Linux\Ubuntu-18.04,you can change it in script.
 + "移除恢复的Ubuntu-18.04.cmd" is use to uninstall exported WSL by "TAR恢复Ubuntu-18.04.cmd".
@@ -32,3 +36,21 @@ ALL FILES IN: D:\WSL
 + "转发端口到WSL容器.cmd" is use to FORWARD host port to WSL,because of this, you can use "host port:WSL port" to visit WSL.file getIp.sh is a script to get WSL's IP,put it at /etc/getIp.sh.if this cmd has a param "yes",it won't exit when is run complete.
 + "启动WSL容器并转发端口.vbs" is use to auto startup WSL and forward host port to WSL.
 + "关闭WSL容器并取消转发端口.vbs" is use to disable forward host port to WSL and shutdown WSL.
+
+### provide some words in chinese of english,this may help somebody
++ 导出 : export
++ 恢复 : restore,import
++ 移除 : uninstall,unregister
++ 状态 : state,status
++ 删除 : delete
++ 转发 : forward
++ 端口 : port
++ 本机 : host
++ 启动 : launch,start,startup
++ 关闭 : close,shutdown
++ 登录 : Login
++ 注销 : Logoff,Logout
++ 会话 : Sessions
++ 断开 : Disconnect
++ 程序 : Program,Command
++ 脚本 : Script
