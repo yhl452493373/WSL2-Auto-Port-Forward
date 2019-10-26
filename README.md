@@ -4,6 +4,7 @@
 ## 中文说明
 
 WSL:Ubuntu-18.04
+
 文件位置:我放在 D:\WSL 目录下
 
 + "导出Ubuntu-18.04.cmd" 用于导出WSL到脚本所在目录,导出后文件名为Ubuntu-18.04.tar
@@ -19,6 +20,7 @@ WSL:Ubuntu-18.04
 ## English
 
 WSL:Ubuntu-18.04
+
 ALL FILES IN: D:\WSL
 
 + "导出Ubuntu-18.04.cmd" is use to export WSL to script dir,export file name is Ubuntu-18.04.tar.
