@@ -28,8 +28,6 @@ set linuxName=Ubuntu-18.04
 set linuxUser=root
 set linuxScript=/etc/port-to-host.sh
 
-wsl -d %linuxName% -u %linuxUser% service nginx start
-
 wsl -d %linuxName% -u %linuxUser% rm -rf /etc/nginx/port-to-host/ >nul
 
 echo start forward wsl2 port to host
