@@ -18,7 +18,7 @@ set slient=%1%
 ::if you want to forward your host port 80 to wsl port 8080 and forward host port 81 to wsl port 8081,update like this:
 ::set forwardPorts=80,8080;81,8081
 
-set forwardPorts=80,80;3306,3306;6379,6379;9300,9300
+set forwardPorts=22,22;80,80;3306,3306;6379,6379;9300,9300
 
 ::You can change the listenIp to your ip config to listen to a specific address
 set listenIp=0.0.0.0

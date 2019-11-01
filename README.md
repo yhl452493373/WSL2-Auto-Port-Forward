@@ -9,6 +9,14 @@ WSL:Ubuntu-18.04
 
 Windows计划任务配置参考目录下截图
 
+执行顺序(Execute Sequence)：
+启动WSL容器并转发端口.vbs -> 启动WSL容器.cmd -> 转发端口到WSL容器.vbs -> 转发端口到WSL容器.cmd -> 转发WSL容器端口到主机.vbs -> 转发WSL容器端口到主机.cmd
+
+其中vbs用于管理员身份调用cmd，并且隐藏执行时的窗口。cmd用于根据参数 “yes” 调用下一个vbs，以管理员身份，隐藏窗口的形式执行对应的bat
+
+for that execute sequence,the vbs file is used to run cmd file with admin and without window,the cmd file is used to run vbs according to cmd file's param 'yes';
+
+
 + "导出Ubuntu-18.04.cmd" 用于导出WSL到脚本所在目录,导出后文件名为Ubuntu-18.04.tar
 + "TAR恢复Ubuntu-18.04.cmd" 用于恢复 "导出Ubuntu-18.04.cmd" 脚本所导出的WSL,恢复位置为: E:\Linux\Ubuntu-18.04,可通过修改脚本修改恢复位置
 + "移除恢复的Ubuntu-18.04.cmd" 用于卸载 "TAR恢复Ubuntu-18.04.cmd" 脚本所恢复的WSL
@@ -19,7 +27,7 @@ Windows计划任务配置参考目录下截图
 + "启动WSL容器并转发端口.vbs" 用于登陆时自动启动WSL,并执行WSL开机自启脚本,且不会有CMD黑窗.可以用Windows的计划任务,在登录时执行;或直接放到Windows的"启动"文件夹实现开机自启
 + "关闭WSL容器并取消转发端口.vbs" 用于注销时自动取消转发本机端口到WSL以及关闭WSL
 + "port-to-host.sh" 用于通过nginx，将WSL中的端口转发到主机上的某个端口。需要复制到/etc/port-to-host.sh，修改权限755。此项依赖于NGINX，同时需要关闭wsl自带的端口转发功能（将.wslconfig复制到windows的你的用户目录下即可：C:\User\YourName\.wslconfig）,关闭后需要在“转发端口到WSL容器.cmd”中添加你要转发到wsl中的端口。默认的22，3306等端口都需要自行转发。要删除端口转发，则修改"删除转发到WSL的端口.cmd"中端口配置
-+ "转发WSL2容器端口到主机.cmd" 配合“port-to-host.sh”使用。如果主机（HOST）启动了防火墙，需要添加对应端口的入栈规则
++ "转发WSL容器端口到主机.cmd" 配合“port-to-host.sh”使用。如果主机（HOST）启动了防火墙，需要添加对应端口的入栈规则
 + "删除转发到主机的端口.cmd" 用于删除WSL转发到主机的端口
 
 ## English
